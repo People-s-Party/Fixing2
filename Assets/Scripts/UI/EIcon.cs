@@ -5,6 +5,10 @@ using TMPro;
 
 public class EIcon : MonoBehaviour
 {
+    private void Start()
+    {
+        RemoveText();
+    }
     private void OnEnable()
     {
         Messenger.AddListener(Events.Interactoff, RemoveText);
