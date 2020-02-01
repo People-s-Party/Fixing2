@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemInform : MonoBehaviour
 {
     public int itemtype;
     public string needName = "";
-    public int dialogueNum = 0;
+    public string dialogueNum = "";
+    public string sceneName;
     private void Start()
     {
 
@@ -44,10 +46,45 @@ public class ItemInform : MonoBehaviour
                             Destroy(this.gameObject);
 
                         }
+                        else
+                        {
+                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
+
+                        }
 
                     }
                 }
 
+            }
+            if (itemtype == 1)
+            {
+
+            }
+            if (itemtype == 2)
+            {
+                if (needName == "")
+                {
+                    SceneManager.LoadScene(sceneName);
+
+                }
+                else
+                {
+                    for (int i = 1; i < 8; i++)
+                    {
+                        GameObject invTemp = GameObject.Find("Inv" + i);
+                        if (needName == invTemp.GetComponent<InventoryInform>().itemName)
+                        {
+                            SceneManager.LoadScene(sceneName);
+
+                        }
+                        else
+                        {
+                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
+
+                        }
+
+                    }
+                }
             }
         }
     }
