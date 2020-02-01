@@ -167,7 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 0
   needName: Itemone
-  dialogueNum: 
+  dialogueNum: 1
+  sceneName: 
 --- !u!61 &12213080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -844,9 +845,10 @@ GameObject:
   - component: {fileID: 726207617}
   - component: {fileID: 726207616}
   - component: {fileID: 726207615}
-  m_Layer: 0
+  - component: {fileID: 726207618}
+  m_Layer: 9
   m_Name: bread
-  m_TagString: Untagged
+  m_TagString: Interface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,8 +866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemtype: 0
-  needName: 
-  dialogueNum: 
+  needName: Itemone
+  dialogueNum: 2
+  sceneName: 
 --- !u!212 &726207616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -929,6 +932,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &726207618
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726207614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.7, y: 0.7}
+    newSize: {x: 0.7, y: 0.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7}
+  m_EdgeRadius: 0
 --- !u!1 &745757700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1685,7 @@ MonoBehaviour:
   itemtype: 0
   needName: 
   dialogueNum: 
+  sceneName: 
 --- !u!1 &1477156909
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class DialogueController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             RemoveDialogue();
+            Time.timeScale = 1;
 
         }
     }
@@ -35,6 +36,7 @@ public class DialogueController : MonoBehaviour
         transform.localScale = Vector3.one;
         string tempText = ((TextAsset)Resources.Load(ID)).text;
         dialogueText.GetComponent<TextMeshProUGUI>().text = tempText;
+        Time.timeScale = 0;
 
     }
     void RemoveDialogue()
