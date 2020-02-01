@@ -17,7 +17,7 @@ public class Emeny : MonoBehaviour
     void Update()
     {
         
-        transform.Translate(moveTotal);
+        //transform.Translate(moveTotal);
 
     }
 }
