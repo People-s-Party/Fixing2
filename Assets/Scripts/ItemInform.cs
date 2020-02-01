@@ -28,6 +28,7 @@ public class ItemInform : MonoBehaviour
         {
             if (itemtype == 0)
             {
+                bool hasPickedUp = false;
                 if (needName == "")
                 {
                     Debug.Log(gameObject.name);
@@ -43,16 +44,18 @@ public class ItemInform : MonoBehaviour
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
                             Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
+                            hasPickedUp = true;
                             Destroy(this.gameObject);
 
                         }
-                        else
+                        else if(!hasPickedUp)
                         {
                             Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
 
                         }
 
                     }
+                    
                 }
 
             }

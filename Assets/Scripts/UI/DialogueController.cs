@@ -16,6 +16,7 @@ public class DialogueController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            RemoveDialogue();
 
         }
     }
