@@ -7,7 +7,7 @@ public class PressedE : MonoBehaviour
     public string subjectname="";
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Messenger.Broadcast<string>(Events.Epressed, subjectname);
         }

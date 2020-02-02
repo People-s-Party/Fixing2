@@ -31,8 +31,6 @@ public class ItemInform : MonoBehaviour
                 bool hasPickedUp = false;
                 if (needName == "")
                 {
-                    Debug.Log(gameObject.name);
-                    Debug.Log(GetComponent<SpriteRenderer>().sprite);
                     Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                     Destroy(this.gameObject);
                 }
@@ -45,6 +43,7 @@ public class ItemInform : MonoBehaviour
                         {
                             Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                             hasPickedUp = true;
+                            GameObject.Find("Ename").SetActive(false);
                             Destroy(this.gameObject);
 
                         }
@@ -67,8 +66,7 @@ public class ItemInform : MonoBehaviour
             {
                 if (needName == "")
                 {
-                    SceneManager.LoadScene(sceneName);
-
+                    Messenger.Broadcast<string>(Events.changeScene, sceneName);
                 }
                 else
                 {
@@ -77,8 +75,7 @@ public class ItemInform : MonoBehaviour
                         GameObject invTemp = GameObject.Find("Inv" + i);
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
-                            SceneManager.LoadScene(sceneName);
-
+                            Messenger.Broadcast<string>(Events.changeScene, sceneName);
                         }
                         else
                         {

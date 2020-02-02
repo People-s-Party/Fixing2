@@ -33,6 +33,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum Events {
+    changeScene,
     Interact,
     Interactoff,
     Epressed,

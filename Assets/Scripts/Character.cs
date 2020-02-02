@@ -40,7 +40,6 @@ public class Character : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log('a');
         Messenger.Broadcast(Events.Interactoff);
     }
     private void OnTriggerEnter2D(Collider2D collision)
