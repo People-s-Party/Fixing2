@@ -41,7 +41,8 @@ public enum Events {
     Dialogue,
     Dialogueoff,
     Usingitem,
-    PickUpItem
+    PickUpItem,
+    EventHappened
 }
 
 static internal class Messenger {
