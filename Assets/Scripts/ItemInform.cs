@@ -45,6 +45,7 @@ public class ItemInform : MonoBehaviour
                         {
                             Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                             hasPickedUp = true;
+                            GameObject.Find("EName").gameObject.SetActive(false);
                             Destroy(this.gameObject);
 
                         }
