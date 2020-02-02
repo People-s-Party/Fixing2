@@ -42,6 +42,7 @@ public class DialogueController : MonoBehaviour
     void RemoveDialogue()
     {
         transform.localScale = Vector3.zero;
+        dialogueText.GetComponent<TextMeshProUGUI>().text = "";
 
     }
 }

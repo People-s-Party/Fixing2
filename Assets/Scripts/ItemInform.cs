@@ -28,65 +28,68 @@ public class ItemInform : MonoBehaviour
         {
             if (itemtype == 0)
             {
-                bool hasPickedUp = false;
+                //如果是0，捡起
                 if (needName == "")
                 {
+                    //如果无需求，捡起
                     Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                     Destroy(this.gameObject);
-                    Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
+                    Messenger.Broadcast<string>(Events.Dialogue, "pickedup");
                 }
                 else
                 {
+                    bool hasPickedUp = false;
                     for (int i = 1; i < 8; i++)
                     {
+                        //判断物品栏内是否有物品
                         GameObject invTemp = GameObject.Find("Inv" + i);
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
+                            //捡起，发对话框，背包
                             Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                             hasPickedUp = true;
-                            GameObject.Find("Ename").SetActive(false);
                             GameObject.Find("EName").gameObject.SetActive(false);
+                            Messenger.Broadcast<string>(Events.Dialogue, "pickedup");
                             Destroy(this.gameObject);
-                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
-
                         }
-                        else if(!hasPickedUp)
-                        {
-                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
-
-                        }
-
                     }
-                    
+                    //捡不起，发对话框
+                    if (!hasPickedUp) Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
+
                 }
 
             }
             if (itemtype == 1)
             {
+                //
 
             }
             if (itemtype == 2)
             {
+                //门，房间=2
                 if (needName == "")
                 {
+                    //无需求，进
                     Messenger.Broadcast<string>(Events.changeScene, sceneName);
                 }
                 else
                 {
+                    //有需求
+                    bool isEntered = false;
                     for (int i = 1; i < 8; i++)
                     {
+                        //检测
                         GameObject invTemp = GameObject.Find("Inv" + i);
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
+                            //进去了
                             Messenger.Broadcast<string>(Events.changeScene, sceneName);
+                            i = 10;
+                            isEntered = true;
                         }
-                        else
-                        {
-                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
-
-                        }
-
                     }
+                    //进不去,爬，对话框
+                    if(!isEntered) Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
                 }
             }
         }

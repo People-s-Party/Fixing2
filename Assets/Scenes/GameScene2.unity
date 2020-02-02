@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 0
   needName: 
-  dialogueNum: A Brave Heart!
+  dialogueNum: BH
   sceneName: 
 --- !u!61 &397053368
 BoxCollider2D:
