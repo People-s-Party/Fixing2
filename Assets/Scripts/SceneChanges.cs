@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SceneChanges : MonoBehaviour
 {
+    Transform TFS;
     private void OnEnable()
     {
     }
     void changeS(string name)
     {
         if (name == gameObject.scene.name){
-
+            gameObject.GetComponentsInChildren<Transform>();
         }
     }
 }
