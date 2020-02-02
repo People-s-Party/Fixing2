@@ -9,6 +9,7 @@ public class ItemInform : MonoBehaviour
     public string needName = "";
     public string dialogueNum = "";
     public string sceneName;
+    public string eventsAfterPicking = "";
     private void Start()
     {
 
