@@ -33,10 +33,10 @@ public class DialogueController : MonoBehaviour
 
     void UseDialogue(string ID)
     {
+        Time.timeScale = 0;
         transform.localScale = Vector3.one;
         string tempText = ((TextAsset)Resources.Load(ID)).text;
         dialogueText.GetComponent<TextMeshProUGUI>().text = tempText;
-        Time.timeScale = 0;
 
     }
     void RemoveDialogue()
