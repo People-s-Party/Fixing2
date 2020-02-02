@@ -39,7 +39,8 @@ public enum Events {
     Epressed,
     itemget,
     Dialogue,
-    Dialogueoff
+    Dialogueoff,
+    Usingitem
 }
 
 static internal class Messenger {

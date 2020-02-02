@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     private void OnEnable()
     {
         Messenger.AddListener<string, Sprite>(Events.itemget, AddInventory);
+        Messenger.AddListener<string>(Events.Usingitem, UsingItemF);
 
     }
     private void OnDisable()
@@ -24,11 +25,13 @@ public class Inventory : MonoBehaviour
         Image tempOut;
         for (int i = 1; i < 8; i++)
         {
+            //检测石佛为空
             GameObject invTemp = GameObject.Find("Inv" + i);
             if (!invTemp.GetComponent<InventoryInform>().hasItem)
             {
                 if (!isAdded)
                 {
+                    //检测是否为空
                     if (!invTemp.TryGetComponent<Image>(out tempOut))
                     {
                         invTemp.AddComponent<Image>().sprite = sprite;
@@ -36,8 +39,7 @@ public class Inventory : MonoBehaviour
                         invTemp.GetComponent<InventoryInform>().itemName = name;
                         isAdded = true;
 
-                    }
-                    
+                    }                    
 
                 }
             }
@@ -46,5 +48,24 @@ public class Inventory : MonoBehaviour
 
         }
 
+    }
+
+    void UsingItemF(string name)
+    {
+        for (int i = 1; i < 8; i++)
+        {
+            //检测石佛有物品
+            GameObject invTemp = GameObject.Find("Inv" + i);
+            if (invTemp.GetComponent<InventoryInform>().hasItem)
+            {
+                if(invTemp.GetComponent<InventoryInform>().itemName == name)
+                {
+                    Destroy(invTemp.GetComponent<Image>());
+                    invTemp.GetComponent<InventoryInform>().hasItem = false;
+                    invTemp.GetComponent<InventoryInform>().itemName = "";
+
+                }
+            }
+        }
     }
 }

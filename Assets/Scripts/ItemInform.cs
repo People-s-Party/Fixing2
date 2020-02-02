@@ -84,6 +84,7 @@ public class ItemInform : MonoBehaviour
                         {
                             //进去了
                             Messenger.Broadcast<string>(Events.changeScene, sceneName);
+                            Messenger.Broadcast<string>(Events.Usingitem, needName);
                             i = 10;
                             isEntered = true;
                         }
