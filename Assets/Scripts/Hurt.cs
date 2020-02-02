@@ -20,6 +20,7 @@ public class Hurt : MonoBehaviour
         if (collision.gameObject.tag == "Trap")
         {
             GameObject.Find("PlayerSprite").GetComponent<SpriteRenderer>().sprite = deadSprite;
+            GetComponent<AudioSource>().Play();
             GetComponent<Character>().PlayerSpeed = 0;
             Invoke("WhiteAgain", 0.2f);
 
