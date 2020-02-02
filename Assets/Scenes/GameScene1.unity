@@ -599,6 +599,11 @@ PrefabInstance:
       propertyPath: doorDir
       value: up
       objectReference: {fileID: 0}
+    - target: {fileID: -3675602801944226091, guid: 642eb6a645ced7847911ee8692ec0ec6,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7202171032001164659, guid: 642eb6a645ced7847911ee8692ec0ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
