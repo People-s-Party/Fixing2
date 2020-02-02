@@ -18,9 +18,9 @@ public class DoorSound : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         if (GetComponent<DoorInform>().doorDir == "left") GameObject.Find("Player").transform.position = new Vector3(8, 0, 0);
-        if (GetComponent<DoorInform>().doorDir == "right") GameObject.Find("Player").transform.position = new Vector3(-10, 0, 0);
-        if (GetComponent<DoorInform>().doorDir == "up") GameObject.Find("Player").transform.position = new Vector3(0, -5, 0);
-        if (GetComponent<DoorInform>().doorDir == "down") GameObject.Find("Player").transform.position = new Vector3(0, 5, 0);
+        else if (GetComponent<DoorInform>().doorDir == "right") GameObject.Find("Player").transform.position = new Vector3(-10, 0, 0);
+        else if (GetComponent<DoorInform>().doorDir == "up") GameObject.Find("Player").transform.position = new Vector3(0, -5, 0);
+        else if (GetComponent<DoorInform>().doorDir == "down") GameObject.Find("Player").transform.position = new Vector3(0, 5, 0);
 
     }
 }
