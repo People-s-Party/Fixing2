@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
@@ -609,7 +609,7 @@ PrefabInstance:
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
@@ -683,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
@@ -804,7 +804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666462497}
   - component: {fileID: 1666462496}
-  - component: {fileID: 1666462495}
   - component: {fileID: 1666462498}
   - component: {fileID: 1666462499}
   m_Layer: 0
@@ -814,14 +813,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &1666462495
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666462494}
-  m_Enabled: 1
 --- !u!20 &1666462496
 Camera:
   m_ObjectHideFlags: 0
@@ -1046,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2413047774403550127, guid: 4a274c4cd4e0c8f4198a1061cbfcf7c9,
         type: 3}

@@ -20,6 +20,8 @@ public class EventGenerader : MonoBehaviour
         {
             Vector3 Place = new Vector3(-4.8f, 2.14f);
             Instantiate(PrefabForEvent,Place,Quaternion.identity,MainObject);
+            Messenger.Broadcast<string>(Events.Dialogue, "AfterBraveHeart");
+            
         }
     }
 }

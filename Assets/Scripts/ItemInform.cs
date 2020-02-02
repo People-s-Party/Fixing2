@@ -73,7 +73,7 @@ public class ItemInform : MonoBehaviour
                 if (needName == "")
                 {
                     //无需求，进
-                    Messenger.Broadcast<string>(Events.changeScene, sceneName);
+                    Messenger.Broadcast<string,string>(Events.changeScene, sceneName, GetComponent<DoorInform>().doorDir);
                 }
                 else
                 {
@@ -86,7 +86,7 @@ public class ItemInform : MonoBehaviour
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
                             //进去了
-                            Messenger.Broadcast<string>(Events.changeScene, sceneName);
+                            Messenger.Broadcast<string,string>(Events.changeScene, sceneName, GetComponent<DoorInform>().doorDir);
                             Messenger.Broadcast<string>(Events.Usingitem, needName);
                             i = 10;
                             isEntered = true;

@@ -306,18 +306,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7202171032012001401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &851114883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851114879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399c7946cf9f1fe44a80850c5b1ebdea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &851114885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +415,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666462497}
   - component: {fileID: 1666462496}
-  - component: {fileID: 1666462495}
   - component: {fileID: 1666462498}
   m_Layer: 0
   m_Name: Main Camera
@@ -436,14 +423,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1666462495
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666462494}
-  m_Enabled: 1
 --- !u!20 &1666462496
 Camera:
   m_ObjectHideFlags: 0
@@ -594,15 +573,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759039431}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4313498261020717340, guid: 642eb6a645ced7847911ee8692ec0ec6,
         type: 3}
       propertyPath: doorDir
       value: up
-      objectReference: {fileID: 0}
-    - target: {fileID: -3675602801944226091, guid: 642eb6a645ced7847911ee8692ec0ec6,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7202171032001164659, guid: 642eb6a645ced7847911ee8692ec0ec6,
         type: 3}
@@ -759,5 +737,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4313498261020717340, guid: 642eb6a645ced7847911ee8692ec0ec6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 642eb6a645ced7847911ee8692ec0ec6, type: 3}
