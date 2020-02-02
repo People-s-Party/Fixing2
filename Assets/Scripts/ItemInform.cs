@@ -32,6 +32,7 @@ public class ItemInform : MonoBehaviour
                 if (needName == "")
                 {
                     Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
+                    Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
                     Destroy(this.gameObject);
                 }
                 else
@@ -42,6 +43,7 @@ public class ItemInform : MonoBehaviour
                         if (needName == invTemp.GetComponent<InventoryInform>().itemName)
                         {
                             Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
+                            Messenger.Broadcast<string>(Events.Dialogue, dialogueNum);
                             hasPickedUp = true;
                             GameObject.Find("Ename").SetActive(false);
                             GameObject.Find("EName").gameObject.SetActive(false);
