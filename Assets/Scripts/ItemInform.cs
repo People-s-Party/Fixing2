@@ -9,6 +9,7 @@ public class ItemInform : MonoBehaviour
     public string needName = "";
     public string dialogueNum = "";
     public string sceneName;
+    public string eventsAfterPicking = "";
     private void Start()
     {
 
@@ -35,6 +36,7 @@ public class ItemInform : MonoBehaviour
                     Messenger.Broadcast<string, Sprite>(Events.itemget, gameObject.name, GetComponent<SpriteRenderer>().sprite);
                     Destroy(this.gameObject);
                     Messenger.Broadcast<string>(Events.Dialogue, "pickedup");
+                    Messenger.Broadcast<string>(Events.EventHappened, name);
                 }
                 else
                 {
@@ -50,6 +52,7 @@ public class ItemInform : MonoBehaviour
                             hasPickedUp = true;
                             GameObject.Find("EName").gameObject.SetActive(false);
                             Messenger.Broadcast<string>(Events.Dialogue, "pickedup");
+                            Messenger.Broadcast<string>(Events.EventHappened, name);
                             Destroy(this.gameObject);
                         }
                     }

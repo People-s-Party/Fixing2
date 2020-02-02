@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SceneChanges : MonoBehaviour
 {
-    Transform TFS;
     private void OnEnable()
     {
         Messenger.AddListener<string>(Events.changeScene, changeS);
